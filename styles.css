@@ -1,0 +1,144 @@
+.cardGridOuter{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem; 
+    width: 100%;
+}
+
+
+
+.awardsSection-outer,
+.migrationWhy-outer, .migrationWhy-inner,
+.globeFaq-outer, .globeFaq-inner,
+.globeCTA-outer, .globeCTA-inner, .globeCTA-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Home Page */
+
+
+
+/* Service Section */
+
+
+.homeServie-outer{
+    margin-top: 130px;
+    padding: 200px 0px;
+    background-color: #f5f5f5;
+}
+
+
+.homeServie-heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeServie-para-sec{
+    width: 450px;
+}
+
+.homeServie-heading-h2{
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 400;
+}
+
+
+.homeServie-card-outer{
+    width: 100%;
+    margin-top: 130px;
+    display: flex;
+    gap: 20px;
+}
+
+.homeServie-card{
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    padding: 58px 68px;
+}
+
+.homeServie-card-h3{
+    font-size: 56px;
+    list-style: 70px;
+    font-weight: 400;
+}
+
+
+.homeServie-card-link{
+    font-size: 18px;
+    color: #000;
+}
+
+
+
+
+/* Migration Page */
+
+.migrationWhy-outer{
+    margin-top: 100px;
+}
+
+.migrationWhy-inner{
+    width: 80%;
+    flex-direction: column;
+}
+
+.migratoin-card-outer{
+    width: 100%;
+    margin-top: 130px;
+    display: flex;
+    gap: 20px;
+}
+
+
+.migrationWhy-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 28px 28px;
+}
+
+.migrationWhy-card-h5{
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.migrationWhy-card-para{
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+
+.migrationProcess-outer{
+    margin-top: 200px;
+    padding: 200px 0px;
+    background-color: #f5f5f5;
+}
+
+.migrationProcess-sec{
+    margin-top: 130px;
+}
+
+
+
+
+
+
+
+
