@@ -34,3 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.navLink-link');
+    const path = window.location.pathname;
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+
+        if (path === href) {
+            link.classList.add('active');
+        }
+    });
+});
+
+

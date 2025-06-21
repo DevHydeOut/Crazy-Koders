@@ -59,25 +59,44 @@
 
 .homeServie-card{
     width: 100%;
-    height: 540px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #ccc;
-    border-radius: 40px;
-    padding: 58px 68px;
+    border-radius: 6px;
+    padding: 35px;
 }
 
 .homeServie-card-h3{
-    font-size: 56px;
-    list-style: 70px;
+    font-size: 32px;
+    list-style: 45px;
     font-weight: 400;
 }
 
+.homeServie-card-para{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.homeServie-card-link-outer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .homeServie-card-link{
+    display: none;
+}
+
+.homeServie-card:hover .homeServie-card-link{
+    display: block;
     font-size: 18px;
-    color: #000;
+    font-weight: 600;
+}
+
+.fa-arrow-right-long{
+    font-size: 25px;
 }
 
 
@@ -86,7 +105,8 @@
 /* Migration Page */
 
 .migrationWhy-outer{
-    margin-top: 100px;
+    padding: 200px 0px;
+    background-color: #f5f5f5;
 }
 
 .migrationWhy-inner{
@@ -108,7 +128,7 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 6px;
     padding: 28px 28px;
 }
 
@@ -126,15 +146,21 @@
 
 
 .migrationProcess-outer{
-    margin-top: 200px;
     padding: 200px 0px;
-    background-color: #f5f5f5;
 }
 
 .migrationProcess-sec{
     margin-top: 130px;
 }
 
+.migration-testiSlider-outer,
+.migration-globeCTA-outer,
+.maint-testiSlider-outer,
+.maintenance-FAQ-outer,
+.dev-testiSlider-outer,
+.dev-globeCTA-outer{
+    background-color: #f5f5f5;
+}
 
 
 
