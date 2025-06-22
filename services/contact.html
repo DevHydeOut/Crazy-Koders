@@ -4,25 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Contact Us</title>
+
 </head>
 <body>
     <header class="">
         <nav class="">
             <div class="navLogo">
-                <h1 class="">Crazy Coders</h1>
+                <h2 class="navLogo-text"><a href="/" class="">Crazy Koders</a></h2>
             </div>
             <div class="navLink">
                 <ul class="navLink-ul">
-                    <li class="navLink-li"><a href="/pages/migration.html" class="navLink-link">Migration</a></li>
-                    <li class="navLink-li"><a href="/pages/maintenance.html" class="navLink-link">Maintenance</a></li>
-                    <li class="navLink-li"><a href="/pages/development.html" class="navLink-link">Development</a></li>
+                    <li class="navLink-li"><a href="/services/migration.html" class="navLink-link">Migration</a></li>
+                    <li class="navLink-li"><a href="/services/maintenance.html" class="navLink-link">Maintenance</a></li>
+                    <li class="navLink-li"><a href="/services/development.html" class="navLink-link">Development</a></li>
+                    <li class="navLink-li"><a href="/services/contact.html" class="navLink-button">Get in Touch</a></li>
+                    <!-- <li class="navLink-li"><a href="/services/about.html" class="navLink-link">About</a></li> -->
                 </ul>
             </div>
         </nav>
     </header>
+    <main class="">
+
+        <section class="contact-Hero-outer section-outer">
+            <div class="maintainHero-inner section-inner">
+
+                <div class="maintainHero-heading servHero-heading">
+                    <span class="maintainHero-heading-span servHero-span">Have Questions or a Project in Mind?</span>
+                    <h1 class="maintainHero-heading-h1 servHero-h1">Let’s Connect and Make Something Great</h1>
+                    <p class="maintainHero-heading-para servHero-para">Whether you’re ready to start a project or just exploring ideas, we’d love to hear from you. Reach out today — we’re here to help, advise, and build with you.</p>
+                    <a href="" class="maintainHero-heading-button servHero-button btn-blue"></a>
+                </div>
+
+                <div class="maintainHero-contactForm-outer servHero-formOuter">
+                    <form action="contact.php" method="POST" class="maintainHero-contactForm-inner servHero-formInner">
+                        <input type="text" name="name" placeholder="Full Name*" required class="maintainHero-contactForm-input servHero-formInput">
+                        <input type="email" name="email" placeholder="Email Address*" required class="maintainHero-contactForm-input servHero-formInput">
+                        <input type="number" name="number" placeholder="Phone Number*" required class="maintainHero-contactForm-input servHero-formInput">
+                        <textarea name="message" placeholder="Tell us more about your project*" required class="maintainHero-contactForm-textArea servHero-formTextArea"></textarea>
+                        <span class="servHero-formSpan maintainHero-contactForm-span">By submitting this form, you agree to Crazy Koders’s Terms of Service and Privacy Policy.</span>
+                        <button type="submit" class="maintainHero-contactForm-button servHero-formButton">Request a Quote</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>         
+        
+        <section class="dev-globeCTA-outer globeCTA-outer">
+            <div class="globeCTA-inner">
+                <div class="globeCTA-heading">
+                    <span class="globeCTA-heading-span">Got an Idea?</span>
+                    <h3 class="globeCTA-h1">Let’s Build It — Together</h3>
+                    <p class="globeCTA-heading-para paraContent">From small websites to complex platforms, we turn ideas into powerful digital solutions that are fast, scalable, and tailored just for you.</p>
+
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a href="" class="globeCTA-button btn-black" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vimal-lnwebworks?hide_gdpr_banner=1&primary_color=009cde'});return false;">Schedule time with me</a>
+                    <!-- Calendly link widget end -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-main section-outer">
+        <nav class="footerNav-outer section-inner">
+            <div class="footerNav-socialIcons">
+                <a href="" class="footer-social-links">Mail</a>
+                <a href="" class="footer-social-links">Linkedin</a>
+            </div>
+            <div class="footerNav-socialIcons">
+                <a href="" class="footer-social-links">© 2025 Crazy Koders, Inc. All rights reserved</a>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="/styles/swiper-bundle.min.js" ></script>
+    <script src="/script.js" ></script>
+   
 </body>
 </html>

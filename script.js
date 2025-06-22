@@ -36,6 +36,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+//Dropdown Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const dropDownItems = document.querySelectorAll('.dropDown-item');
+    
+    dropDownItems.forEach(item => {
+        const dropDownQuestion = item.querySelector('.dropDown-question');
+        
+        dropDownQuestion.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            dropDownItems.forEach(dropDownItem => {
+                if (dropDownItem !== item) {
+                    dropDownItem.classList.remove('active');
+                }
+            });
+            
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.navLink-link');
     const path = window.location.pathname;
@@ -50,3 +77,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+const stickySection = document.getElementById('stickySection');
+const imageItems = document.querySelectorAll('.aboutImage-item');
+const contentItems = document.querySelectorAll('.aboutContent-item content-item');
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateActiveImage() {
+    const rect = stickySection.getBoundingClientRect();
+    const sectionTop = rect.top;
+    const sectionHeight = rect.height;
+    const windowHeight = window.innerHeight;
+
+    let progress = 0;
+    if (sectionTop <= 0 && sectionTop > -(sectionHeight - windowHeight)) {
+        progress = Math.abs(sectionTop) / (sectionHeight - windowHeight);
+    } else if (sectionTop <= -(sectionHeight - windowHeight)) {
+        progress = 1;
+    }
+
+    scrollProgress.style.height = (progress * 100) + '%';
+
+    const totalImages = imageItems.length;
+    const imageIndex = Math.min(Math.floor(progress * totalImages), totalImages - 1);
+
+    imageItems.forEach((item, index) => {
+        item.classList.toggle('active', index === imageIndex);
+    });
+}
+
+let ticking = false;
+function onScroll() {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            updateActiveImage();
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', onScroll);
+
+updateActiveImage();

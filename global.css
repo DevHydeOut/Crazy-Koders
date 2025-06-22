@@ -71,6 +71,10 @@ a{
     flex-direction: column;
 }
 
+.section-sec-inner{
+    margin-top: 130px;
+}
+
 p{
     font-size: 18px;
     line-height: 28px;
@@ -105,6 +109,7 @@ nav{
 
 .navLink-ul{
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -128,6 +133,16 @@ nav{
 
 .navLink-link.active{
     border-bottom: 2px solid #009CDE;
+}
+
+.navLink-button{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 30px;
+    color: white;
+    background: linear-gradient(136deg, #000 15.12%, #434343 85.76%);
+    border-radius: 6px;
 }
 
 
@@ -162,10 +177,10 @@ nav{
 /* Buttons Style */
 
 .btn-black{
-    font-size: 20px;
     margin-top: 60px;
-    text-align: center;
+    font-size: 18px;
     font-weight: 600;
+    text-align: center;
     padding: 16px 3.2vw;
     color: white;
     background: linear-gradient(136deg, #000 15.12%, #434343 85.76%);
@@ -173,10 +188,10 @@ nav{
 }
 
 .btn-blue{
-    font-size: 20px;
     margin-top: 60px;
-    text-align: center;
+    font-size: 18px;
     font-weight: 600;
+    text-align: center;
     padding: 16px 3.2vw;
     color: white;
     background-color: #009CDE;
@@ -186,12 +201,12 @@ nav{
 
 /* Span Style */
 
-.heroSec-span,
 .headingCon-span{
     font-size: 18px;
     line-height: 28px;
+    font-weight: 900;
+    color: #5A5A5A;
 }
-
 
 
 
@@ -219,7 +234,7 @@ nav{
 }
 
 .heroSec-para{
-    margin-top: 50px;
+    margin-top: 30px;
     width: 520px;
     font-size: 24px;
     line-height: 36px;
@@ -247,8 +262,8 @@ nav{
 
 .headingCon-h2{
     font-size: 64px;
-    line-height: 75px;
-    font-weight: 400;
+    line-height: 80px;
+    font-weight: 800;
 }
 
 .headingCon-para{
@@ -305,16 +320,13 @@ nav{
     padding: 200px 0px;
 }
 
-
-.faq-container {
+.globeFAQList-inner,
+.globeDropDownList-inner{
     width: 100%;
-    backdrop-filter: blur(10px);
-    border-radius: 6px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    margin-top: 130px;
 }
 
-.faq-item {
+.faq-item{
     overflow: hidden;
     transition: all 0.3s ease;
     border-bottom: 1px solid;
@@ -324,7 +336,8 @@ nav{
     border-color: #4facfe;
 } */
 
-.faq-question {
+.faq-question,
+.dropDown-question {
     padding: 35px 40px;
     cursor: pointer;
     display: flex;
@@ -333,13 +346,15 @@ nav{
     user-select: none;
 }
 
-.faq-question h3 {
+.faq-question h3,
+.dropDown-question h3 {
     font-size: 32px;
     font-weight: 400;
     line-height: 45px;
 }
 
-.faq-icon {
+.faq-icon,
+.dropDownItem-icon {
     font-size: 25px;
     color: #000000;
     transition: transform 0.3s ease;
@@ -347,25 +362,51 @@ nav{
     margin-left: 15px;
 }
 
-.faq-item.active .faq-icon {
+.faq-item.active .faq-icon,
+.dropDown-item.active .dropDownItem-icon {
     transform: rotate(45deg);
 }
 
-.faq-answer {
+.faq-answer,
+.dropDownItem-answer {
     max-height: 0;
     overflow: hidden;
 }
 
-.faq-item.active .faq-answer {
+.faq-item.active .faq-answer,
+.dropDown-item.active .dropDownItem-answer {
     max-height: 300px;
-    padding: 0px 35px 40px;
+    padding: 0px 40px 40px;
 }
 
-.faq-answer p {
+.faq-answer p{
     font-size: 22px;
     line-height: 32px;
 }
 
+
+/* Dropdown Section */
+
+.dropDown-item {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid;
+}
+
+.dropDown-item:first-child{
+    border-top: 1px solid;
+}
+
+
+.dropDown-question h3{
+    font-weight: 600;
+}
+
+.dropDownItem-answer p {
+    width: 60%;
+    font-size: 20px;
+    line-height: 36px;
+}
 
 
 /* Awards */
@@ -437,7 +478,7 @@ nav{
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background-color: #000000;
+    background-color: #009CDE;
     border-radius: 6px;
 }
 
@@ -646,7 +687,10 @@ nav{
     line-height: 36px;  
 }
 
-.servHero-span{
+
+.heroSec-span,
+.servHero-span,
+.aboutSec-span{
     font-size: 18px;
     line-height: 28px;
     font-weight: 900;
@@ -745,3 +789,126 @@ nav{
     background-color: #ffffff05;
     border-color: rgba(255, 255, 255, 0.10);
 } */
+
+
+/* About Me section */
+
+.aboutImageText-inner{
+    margin-top: 130px;
+    width: 100%;
+}
+
+.sticky-section {
+    position: relative;
+    display: flex;
+    min-height: 400vh;
+}
+
+.image-block {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    border-radius: 6px;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.aboutImage-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.aboutImage-item.active {
+    opacity: 1;
+}
+
+.aboutImage-item-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content block - scrolls normally */
+.content-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-item {
+    height: 100vh;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-item-h3{
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 45px;
+    color: #000000;
+}
+
+.content-item-para {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sticky-section {
+        flex-direction: column;
+    }
+
+    .image-block,
+    .content-block {
+        width: 100%;
+    }
+
+    .image-block {
+        height: 50vh;
+        position: relative;
+    }
+
+    .content-item {
+        padding: 40px 30px;
+        height: 50vh;
+    }
+
+    .content-item h2 {
+        font-size: 2rem;
+    }
+
+    .content-item p {
+        font-size: 1rem;
+    }
+
+    .aboutImage-item {
+        font-size: 2rem;
+    }
+}
+
+.aboutImage-item{
+    display: flex !important;
+}
