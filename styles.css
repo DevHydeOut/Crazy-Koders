@@ -52,6 +52,9 @@
     border: 1px solid #ccc;
     border-radius: 6px;
     padding: 35px;
+    background-color: white;
+    z-index: 1;
+    transition: transform 0.3s ease;
 }
 
 .homeServie-card-h3{
@@ -77,12 +80,12 @@
 
 .homeServie-card:hover .homeServie-card-link{
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .fa-arrow-right-long{
-    font-size: 25px;
+    font-size: 15px;
 }
 
 
@@ -152,7 +155,8 @@
 .dev-FAQ-outer,
 .main-dropDown-outer, .maint-aboutMe-outer, .maintenance-FAQ-outer,
 .dev-testiSlider-outer, .dev-aboutMe-outer,
-.aboutHome-outer{
+.aboutHome-outer,
+.home-globeCTA-outer{
     background-color: #f5f5f5;
 }
 
@@ -214,6 +218,20 @@
 
 .aboutHome-outer{
     margin-top: 130px;
+    flex-direction: column;
+}
+
+.logoHero-inner{
+    margin-top: 100px;
+    width: 100%;
+}
+
+.aboutHomeLogo-img{
+    height: 100px;
+}
+
+.aboutHomeLogo-aq{
+    height: 50px;
 }
 
 .aboutHome-inner{
@@ -271,4 +289,54 @@
 
 .logoHero-img{
     height: 56px;
+}
+
+
+
+/* Card animation */
+
+.animateCard-outer {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedCard-bgGlow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    filter: blur(10px);
+    transition: 
+      opacity 0.2s ease, 
+      visibility 0.2s ease, 
+      transform 0.2s ease;
+    transform: scale(0.8);
+    border-radius: 6px;
+    background: radial-gradient(circle at center, #75cfff, #009CDE, #017ee4);
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.animationEffect:hover ~ .animatedCard-bgGlow {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1); /* Grow to full size */
+    animation: rotateBackground 6s linear infinite;
+}
+
+
+@keyframes rotateBackground {
+    0%   { background-position: 0% 50%; }
+    25%  { background-position: 50% 100%; }
+    50%  { background-position: 100% 50%; }
+    75%  { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
 }
