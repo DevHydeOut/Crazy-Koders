@@ -12,7 +12,9 @@
 /* Home Page */
 
 .homeHero-heading-button{
-    margin-top: 32px;
+    margin-top: 30px !important;
+    font-size: 16px !important;
+    padding: 16px 40px !important;
 }
 
 
@@ -222,8 +224,13 @@
 }
 
 .logoHero-inner{
-    margin-top: 100px;
     width: 100%;
+}
+
+.serviceLogoHero-inner{
+    margin-top: 60px;
+    width: 100%;
+    gap: 30px;
 }
 
 .aboutHomeLogo-img{
@@ -277,7 +284,7 @@
 
 
 .logoHero-inner{
-    gap: 20px;
+    gap: 30px;
 }
 
 .logoHero-logo{
