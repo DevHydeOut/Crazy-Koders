@@ -1,13 +1,36 @@
 // Testimonial
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.1,
-    spaceBetween: 20,
-    navigation: {
+  slidesPerView: 2.1,
+  spaceBetween: 20,
+  navigation: {
     nextEl: ".button-next",
     prevEl: ".button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 0.8,
+      spaceBetween: 15,
     },
+    480: {
+      slidesPerView: 1.1,
+      spaceBetween: 15,
+    },
+    620: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    975: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+  },
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
