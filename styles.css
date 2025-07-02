@@ -191,14 +191,19 @@
     background-color: #f5f5f5;
 }
 
-.dev-card-outer{
+.dev-card-outer,
+.main-card-outer{
     width: 100%;
-    overflow-x: scroll;
-    padding-bottom: 4rem;
     margin-top: 130px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+
+.main-card-outer{
+    overflow-x: scroll;
+    padding-bottom: 4rem;
 }
 
 .dev-Why-card-h5Wrap{
@@ -210,6 +215,13 @@
     min-width: 1450px;
     display: flex;
     gap: 20px;
+}
+
+.dev-cardGridOuter-inner{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr) !important;
+    gap: 16px;
 }
 
 .maint-aboutMe-outer, 
@@ -537,6 +549,9 @@
     .homeServie-card-para {
         margin-top: 20px;
     }   
+    .globeCTA-heading-para{
+        width: 100% !important;
+    }
 
 }
 
@@ -559,7 +574,9 @@
     .homeServie-outer,
     .testimonialSlider-outer,
     .tableSec-outer,
-    .dev-Why-outer{
+    .dev-Why-outer,
+    .globeFaq-outer,
+    .maintPackage-outer{
         padding: 100px 0px !important;
     }   
 
@@ -568,7 +585,9 @@
     .globeFAQList-inner, 
     .globeDropDownList-inner,
     .aboutImageText-inner,
-    .dev-card-outer {
+    .dev-card-outer,
+    .section-sec-inner,
+    .package-card-wrapper {
         margin-top: 75px !important;
     }
     
@@ -604,20 +623,6 @@
 
 }
 
-@media (max-width: 520px) {
-    
-    .faq-question h3, .dropDown-question h3{
-        font-size: 20px !important;
-        line-height: 30px !important;
-    }
-    .faq-question, .dropDown-question{
-        padding: 15px 20px !important;
-    }
-    .faq-item.active .faq-answer, 
-    .dropDown-item.active .dropDownItem-answer{
-        padding: 0px 20px 20px !important;
-    }
-}
 
 @media (max-width: 430px) { 
     .migrationProcess-outer, 
@@ -628,7 +633,9 @@
     .awardsSection-outer,
     .testimonialSlider-outer,
     .tableSec-outer,
-    .dev-Why-outer{
+    .dev-Why-outer,
+    .globeFaq-outer,
+    .maintPackage-outer{
         padding: 75px 0px !important;
     }
 
@@ -637,7 +644,9 @@
     .globeFAQList-inner, 
     .globeDropDownList-inner,
     .aboutImageText-inner,
-    .dev-card-outer {
+    .dev-card-outer,
+    .section-sec-inner,
+    .package-card-wrapper {
         margin-top: 50px !important;
     }
     
@@ -663,9 +672,6 @@
         font-size: 30px !important;
         line-height: 40px !important;
     }
-    .globeCTA-heading-para{
-        width: 100% !important;
-    }
 }
 
 
@@ -682,6 +688,14 @@
     .testimonialSlider-card-para{
         font-size: 20px !important;
         line-height: 32px !important;
+    }
+    .dev-Why-card{
+        padding: 20px !important;
+    }
+    .dev-Why-card-h5{
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 40px;
     }
 }
 
@@ -758,6 +772,9 @@
     .dropDownItem-answer p{
         width: 100% !important;   
     }
+    .dev-cardGridOuter-inner{
+        grid-template-columns: repeat(3, 3fr) !important;
+    }
 
 }
 
@@ -776,6 +793,41 @@
         min-width: 100% !important;
     }
     .serviceHero-outer{
-        padding-top: 20px !important;
+        padding: 20px !important;
+    }
+    .dev-cardGridOuter-inner{
+        grid-template-columns: repeat(2, 4fr) !important;
+    }
+}
+
+
+@media (max-width: 520px) {
+    
+    .faq-question h3, .dropDown-question h3{
+        font-size: 20px !important;
+        line-height: 30px !important;
+    }
+    .faq-question, .dropDown-question{
+        padding: 15px 20px !important;
+    }
+    .faq-item.active .faq-answer, 
+    .dropDown-item.active .dropDownItem-answer{
+        padding: 0px 20px 20px !important;
+    }
+    .testimonialSlider-userImg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .testimonialSlider-userImgC{
+        gap:15px !important;
+    }
+    .testimonialSlider-card-h6 {
+        margin-top: 5px !important;
+    }
+    .content-block{
+        gap: 50px !important;
+    }
+    .dev-cardGridOuter-inner{
+        grid-template-columns: repeat(1, 8fr) !important;
     }
 }

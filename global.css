@@ -516,7 +516,7 @@ nav{
 
 .testimonialSlider-sec-card{
     width: 100%;
-    min-width: 360px;
+    min-width: 300px;
     height: 480px;
     padding: 40px;
     display: flex;
@@ -633,8 +633,16 @@ nav{
     padding: 200px 0px;
 }
 
-.package-card-outer{
+.package-card-wrapper{
+    width: 100%;
     margin-top: 130px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+.package-card-outer{
+    width: 100%;
+    min-width: 1400px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
