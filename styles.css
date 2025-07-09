@@ -984,17 +984,20 @@
 
 }
 
-@media (max-width: 840px){
+@media (max-width:980px){
+    
     header {
         height: 75px;
+    }
+    
+    .navMobile-menu{
+        display: block;
     }
     .navLink-ul{
         display: none !important;
     }
-    .navMobile-menu{
-        display: block;
-    }
 }
+
 
 @media (max-width: 720px){
 
