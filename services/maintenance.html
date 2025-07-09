@@ -26,7 +26,29 @@
                     <li class="navLink-li"><a href="/services/insights.html" class="navLink-link">Insights</a></li>
                     <li class="navLink-li"><a href="/services/contact.html" class="navLink-button">Get in Touch</a></li>
                 </ul>
-                <div class="navMobile-menu">Menu</div>
+                <div class="navMobile-menu">
+                    <i class="fa-solid fa-bars mobileMenu-burger" id="mobileMenuBurger"></i>
+                    <div class="mobileMenu-overlay" id="mobileMenuOverlay">.</div>
+                    <div class="mobileMenu-sidebar" id="mobileMenuSidebar">
+                        <div class="mobileMenu-sidebar-header">
+                            <div class="mobileMenu-logo"><h2 class="navLogo-text"><a href="/" class="">Crazy Koders</a></h2></div>
+                            <i class="fa-solid fa-xmark mobileMenu-close" id="mobileMenuClose"></i>
+                        </div>
+                        
+                        <nav class="mobileMenu-sidebar-nav">
+                            <ul>
+                                <li class="navMobile-li"><a href="/services/migration.html" class="navMobile-link">Migration</a></li>
+                                <li class="navMobile-li"><a href="/services/maintenance.html" class="navMobile-link">Maintenance</a></li>
+                                <li class="navMobile-li"><a href="/services/development.html" class="navMobile-link">Development</a></li>
+                                <li class="navMobile-li"><a href="/services/insights.html" class="navMobile-link">Insights</a></li>
+                                <li class="navLink-li navMobile-btn"><a href="/services/contact.html" class="navLink-button navMobile-button">Get in Touch</a></li>
+                            </ul>
+                            <div class="navMobile-banner">
+                                <img src="/assets/mobile-banner.svg" alt="">
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -650,8 +672,44 @@
                 <a href="" class="footer-social-links">© 2025 Crazy Koders, Inc. All rights reserved</a>
             </div>
         </nav>
-    </footer>
+    </footer>    
+    <script>
+        const burger = document.getElementById('mobileMenuBurger');
+        const sidebar = document.getElementById('mobileMenuSidebar');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        const closeBtn = document.getElementById('mobileMenuClose');
 
+        function openMenu() {
+            burger.classList.add('mobileMenu-active');
+            sidebar.classList.add('mobileMenu-active');
+            overlay.classList.add('mobileMenu-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            burger.classList.remove('mobileMenu-active');
+            sidebar.classList.remove('mobileMenu-active');
+            overlay.classList.remove('mobileMenu-active');
+            document.body.style.overflow = '';
+        }
+
+        burger.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        
+        const sidebarLinks = document.querySelectorAll('.mobileMenu-sidebar-nav a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
     <script src="/styles/swiper-bundle.min.js" ></script>
     <script src="/script.js" ></script>
    
