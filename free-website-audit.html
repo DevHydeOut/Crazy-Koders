@@ -10,8 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Contact Us</title>
-
+    <title>Free website audit</title>
 </head>
 <body>
     <header class="">
@@ -56,7 +55,7 @@
     </header>
     <main class="">
 
-        <section class="contact-Hero-outer section-outer">
+        <section class="contact-Hero-outer section-outer" style="height: 1080px; align-items:flex-start ">
             <div class="maintainHero-inner section-inner">
 
                 <div class="maintainHero-heading servHero-heading">
@@ -78,26 +77,10 @@
                 </div>
 
             </div>
-        </section>         
-        
-        <section class="dev-globeCTA-outer globeCTA-outer">
-            <div class="globeCTA-inner">
-                <div class="globeCTA-heading">
-                    <span class="globeCTA-heading-span">Got an Idea?</span>
-                    <h3 class="globeCTA-h1">Let’s Build It — Together</h3>
-                    <p class="globeCTA-heading-para paraContent">From small websites to complex platforms, we turn ideas into powerful digital solutions that are fast, scalable, and tailored just for you.</p>
-
-                    <!-- Calendly link widget begin -->
-                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                    <a href="" class="globeCTA-button btn-black" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vimal-lnwebworks?hide_gdpr_banner=1&primary_color=009cde'});return false;">Schedule time with me</a>
-                    <!-- Calendly link widget end -->
-                </div>
-            </div>
-        </section>
+        </section>  
 
     </main>
-
+   
     <footer class="footer-main section-outer">
         <nav class="footerNav-outer section-inner">
             <div class="footerNav-socialIcons">
@@ -109,10 +92,47 @@
                 </a>
             </div>
         </nav>
-    </footer>
+    </footer>   
 
-    <script src="/styles/swiper-bundle.min.js" ></script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const burger = document.getElementById('mobileMenuBurger');
+        const sidebar = document.getElementById('mobileMenuSidebar');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        const closeBtn = document.getElementById('mobileMenuClose');
+
+        function openMenu() {
+            burger.classList.add('mobileMenu-active');
+            sidebar.classList.add('mobileMenu-active');
+            overlay.classList.add('mobileMenu-active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            burger.classList.remove('mobileMenu-active');
+            sidebar.classList.remove('mobileMenu-active');
+            overlay.classList.remove('mobileMenu-active');
+            document.body.style.overflow = '';
+        }
+
+        burger.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        const sidebarLinks = document.querySelectorAll('.mobileMenu-sidebar-nav a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+    </script>
+    
     <script src="/script.js" ></script>
-   
 </body>
 </html>

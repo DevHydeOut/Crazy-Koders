@@ -88,16 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.navLink-link');
-    const path = window.location.pathname;
+    const path = window.location.pathname
+        .replace(/\/$/, '')
+        .replace('index.html', '');
 
     links.forEach(link => {
-        const href = link.getAttribute('href');
+        const href = link.getAttribute('href')
+            .replace(/\/$/, '')
+            .replace('index.html', '');
 
         if (path === href) {
             link.classList.add('active');
         }
     });
 });
+
 
 
 const stickySection = document.getElementById('stickySection');
